@@ -33,6 +33,6 @@ let journal = [
         "lasagna","touched tree","brushed teeth"],
     squirrel:false},
    { events:["weekend","cycling","break",
-        "beer","bathing"],
+        "beer",""],
     squirrel:true}
 ];
