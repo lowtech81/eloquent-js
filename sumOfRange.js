@@ -39,11 +39,11 @@ function range(start,end,step) {
 Give the sum of an array of numbers. 
 */
 function sum(range) {
-    let result = 0;
+    let result = null;
     if(range==null){
         console.log("The inputed range is null!");
-        result=null;
     } else {
+        result=0;
         for (let number of range) {
             result += number;
         }  
