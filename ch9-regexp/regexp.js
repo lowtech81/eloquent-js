@@ -71,6 +71,26 @@ console.log(/\bcat\b/.test("concatenate"));
 // → false
 
 //choice patterns
-let animalCount = /\b\d+ (pig|cow|chicken)s?\b/;
+let animalCount = /^\d+ (pig|cow|chicken)s?$/;
 console.log(animalCount.test("15 pigs"));
 console.log(animalCount.test("15 pigchickens"));
+
+//the replace method
+console.log("papa".replace("p","m"));
+console.log("Borobudur".replace(/[ou]/,"a"));
+console.log("Borobudur".replace(/[ou]/g,"a"));
+
+console.log("Liskov, Barbara\nMcCarthy, John\nWadler, Philip"
+    .replace(/(\w+), (\w+)/g,"$2 $1"));
+
+let stock = '1 lemon, 2 cabbages, and 101 eggs';
+function minusOne(match, amount, unit){
+    amount = Number(amount)-1;
+    if(amount == 1){
+        unit = unit.slice(0, unit.length-1);
+    } else if(amount == 0){
+        amount = "no";
+    }
+    return amount + " " + unit;
+}
+console.log(stock.replace(/(\d+) (\w+)/g,minusOne));
