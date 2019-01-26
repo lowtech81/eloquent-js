@@ -21,6 +21,12 @@ class Group {
     }
 }
 
+class GroupIterator {
+    constructor(group){
+        this.group=group;
+    }
+    
+}
 let group=Group.from([10,20]);
 console.log(group.has(10));
 // -> true
